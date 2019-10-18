@@ -1,0 +1,30 @@
+{
+  "name": "Restaurant-Passport",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "node index.js",
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2nd-Level/Restaurant-Passport.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/2nd-Level/Restaurant-Passport/issues"
+  },
+  "homepage": "https://github.com/2nd-Level/Restaurant-Passport#readme",
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "knex": "^0.19.5",
+    "sqlite3": "^4.1.0"
+  }
+}
