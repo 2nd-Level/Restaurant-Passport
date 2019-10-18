@@ -3,6 +3,9 @@ const db = require('../data/dbConfig.js');
 module.exports = {
   get,
   getById,
+  add,
+  update, 
+  remove
 };
 
 function get() {
@@ -14,3 +17,26 @@ function getById(id) {
     .where({ 'users.id': id })
     .first();
 }
+
+function add(user) {
+  return db('users')
+         .insert(user)
+         .then(ids => {
+  return db('users')
+         .where({ id: ids[0] })
+         .first();
+  });
+}
+
+function update(id, user) {
+  return db('users')
+         .where('id', Number(id))
+         .update(user);
+}
+
+function remove(id) {
+  return db('users')
+    .where('id', Number(id))
+    .del();
+}
+
