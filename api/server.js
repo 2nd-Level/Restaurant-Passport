@@ -3,6 +3,7 @@ const helmet = require('helmet')
 
 
 const usersRouter = require('../users/usersRouter.js');
+const citiesRouter = require('../cities/citiesRouter')
 
 
 const server = express();
@@ -13,6 +14,7 @@ server.use(express.json())
 
 
 server.use('/api/users', usersRouter);
+server.use('/api/cities', citiesRouter)
 
 
 server.get('/', (req, res)  => {
