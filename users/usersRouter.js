@@ -32,16 +32,6 @@ router.get('/', (req, res) => {
           });
   });
 
-  router.post('/', (req, res) => {
-    users.add(req.body)
-         .then(user => {
-              res.status(201).json(user);
-          })
-         .catch (err => {
-              res.status(500).json({ err: 'Cannot add the user' });
-          });
-  });
-
   router.put('/:id', (req, res) => {
     const userId = req.params.id;
     const update = req.body;
@@ -90,5 +80,10 @@ router.delete('/:id', (req, res) => {
         })
 
 });
+
+
+
+
+
 
 module.exports = router;

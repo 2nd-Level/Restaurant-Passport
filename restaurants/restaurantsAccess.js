@@ -1,4 +1,3 @@
-
 const db = require('../data/dbConfig.js');
 
 module.exports = {
@@ -13,13 +12,13 @@ module.exports = {
 
 
 function get() {
-  return db('cities');
+  return db('restaurants');
 }
 
 function getById(id) {
-  return db('cities')
-    .where({ 'cities.id': id })
-    .first();
+  return db('restaurants')
+    .where({ 'restaurants.city_id': id })
+   
 }
 
 function add(city) {
@@ -32,10 +31,10 @@ function add(city) {
   });
 }
 
-function update(id, city) {
-  return db('cities')
+function update(id, restaurant) {
+  return db('restaurants')
          .where('id', Number(id))
-         .update(city);
+         .update(restaurant);
 }
 
 function remove(id) {

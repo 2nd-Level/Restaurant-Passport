@@ -9,6 +9,10 @@ module.exports = {
   remove
 };
 
+
+
+
+
 function get() {
   return db('users');
 }
@@ -46,4 +50,6 @@ function remove(id) {
     .where('id', Number(id))
     .del();
 }
+
+
 

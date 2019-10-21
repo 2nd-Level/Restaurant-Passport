@@ -1,4 +1,3 @@
-
 const db = require('../data/dbConfig.js');
 
 module.exports = {
@@ -13,13 +12,13 @@ module.exports = {
 
 
 function get() {
-  return db('cities');
+  return db('user_city');
 }
 
 function getById(id) {
-  return db('cities')
-    .where({ 'cities.id': id })
-    .first();
+  return db('user_city')
+    .where({ 'user_city.user_id': id })
+   
 }
 
 function add(city) {
